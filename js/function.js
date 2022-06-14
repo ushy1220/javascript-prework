@@ -4,7 +4,9 @@ function clearMessages() {
 
 function displayResult(argPlayerMove, argComputerMove) {
     console.log('wywołano funkcję displayResults z argumentami: ' + argPlayerMove + ', ' + argComputerMove);
-    if (argPlayerMove == 'Papier' && argComputerMove == 'Kamień') {
+    if (argComputerMove == argPlayerMove) {
+        console.log ('Remis');
+    } else if (argPlayerMove == 'Papier' && argComputerMove == 'Kamień') {
       console.log('Wygrywasz!');
     } else {
       console.log('Przegrywasz :(');

@@ -1,15 +1,17 @@
+
+
 let argComputerMove, argMoveId, argPlayerMove, computerMove, playerInput, playerMove, randomNumber;
 
-const button, buttonPaper, buttonRock, buttonScisors, buttonTest;
+const  
+buttonPaper = document.getElementById('button-paper'),
+buttonRock = document.getElementById('button-rock'),
+buttonScisors = document.getElementById('button-scissors'),
+buttonTest = document.getElementById('button-test');
 
 /**
  * Describe this function...
  */
-
- buttonPaper = document.getElementById('button-paper');
- buttonRock = document.getElementById('button-rock');
- buttonScisors = document.getElementById('button-scisors');
- buttonTest = document.getElementById('button-test');
+alert('hello');
 
 function buttonClicked(buttonPaper) {
   clearMessages();
@@ -25,6 +27,15 @@ console.log('ruch komputera to: ' + computerMove);
 displayResult(playerMove, computerMove);
 }
 
+function displayResult(argPlayerMove, argComputerMove) {
+  console.log('wywołano funkcję displayResults z argumentami: ' + argPlayerMove + ', ' + argComputerMove);
+  if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {
+    printMessage('Wygrywasz!');
+  } else {
+    printMessage('Przegrywasz :(');
+  }
+  printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
+}
 
 buttonTest.addEventListener('click', function(){ buttonClicked('Guzik TEST'); });
 buttonPaper.addEventListener('click', function(){ buttonClicked('Papier'); });

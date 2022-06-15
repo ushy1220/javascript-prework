@@ -23,6 +23,8 @@ if(button == 'Kamień'){
   playerMove = buttonScisors;
 }
 
+
+
 console.log('ruch gracza to: ' + playerMove);
 randomNumber = Math.floor(Math.random() * 3 + 1);
 console.log('wylosowana liczba to: ' + randomNumber);
